@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { scrollToSection } from "../utils/scrollToSection";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -15,8 +16,7 @@ function Navbar() {
 
   const handleNav = (href: string) => {
     setOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    scrollToSection(href);
   };
 
   return (

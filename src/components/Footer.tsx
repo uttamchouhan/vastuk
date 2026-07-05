@@ -1,3 +1,5 @@
+import { scrollToSection } from "../utils/scrollToSection";
+
 function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -19,6 +21,10 @@ function Footer() {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(`#${item.toLowerCase()}`);
+                    }}
                     className="hover:text-white transition-colors"
                   >
                     {item}

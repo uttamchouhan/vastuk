@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { scrollToSection } from "../utils/scrollToSection";
 
 function ScribbleIcon({ className = "" }: { className?: string }) {
   return (
@@ -73,7 +74,7 @@ function About() {
             type="button"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => scrollToSection("#contact")}
             className="group px-8 sm:px-10 py-3 rounded-full bg-blue-500 text-white mt-8 flex items-center gap-2 hover:bg-blue-600 transition-colors"
           >
             Get Started

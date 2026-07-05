@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { scrollToSection } from "../utils/scrollToSection";
 
 function Hero() {
-  const scrollTo = (id: string) => {
-    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
@@ -41,7 +39,7 @@ function Hero() {
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 mt-10 sm:mt-12 justify-center">
           <button
             type="button"
-            onClick={() => scrollTo("#projects")}
+            onClick={() => scrollToSection("#projects")}
             className="group px-6 sm:px-8 py-3 bg-zinc-950 text-white rounded-full flex items-center gap-2 hover:bg-zinc-800 transition-colors w-full sm:w-auto justify-center"
           >
             Explore Our Work
@@ -49,7 +47,7 @@ function Hero() {
           </button>
           <button
             type="button"
-            onClick={() => scrollTo("#contact")}
+            onClick={() => scrollToSection("#contact")}
             className="px-6 sm:px-8 py-3 border border-zinc-300 text-zinc-700 rounded-full hover:border-zinc-500 transition-colors w-full sm:w-auto"
           >
             Book Consultation
