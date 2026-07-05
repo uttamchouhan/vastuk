@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-// GitHub Pages: https://uttamchouhan.github.io/Vastuk_Portfolio/
+// GitHub Pages: https://uttamchouhan.github.io/vastuk/
 export default defineConfig(({ mode }) => ({
   base: mode === "production" ? "/vastuk/" : "/",
   plugins: [react(), tailwindcss()],
